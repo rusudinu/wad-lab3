@@ -1,0 +1,36 @@
+@startuml
+
+class Person {
+    -name: String
+    -email: String
+    -dateOfBirth: Date
+}
+
+class Employee {
+    -department: String
+    -salary: Double
+    -hireDate: Date
+    -score: String
+}
+
+class Project {
+    -name: String
+    -startDate: Date
+    -endDate: Date
+    -assignedTeam: Team
+    -status: String
+}
+
+class Team {
+    -teamName: String
+    -description: String
+    -teamLead: Employee
+    -members: Employee[]
+}
+
+' Relationships
+Person <|-- Employee
+Team --> "+*" Employee
+Project "0..*" -- "1" Team
+
+@enduml

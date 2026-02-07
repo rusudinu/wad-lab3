@@ -1,5 +1,26 @@
 # Wad Lab 3 - JPA + Postgres + Redis
 
+## Laboratory request
+
+Domain:
+![domain.png](img/domain.png)
+
+In this exercise we will use Spring Data JPA to access the database.
+
+Implement the above domain model as entity classes. Populate (from Java) the entities with meaningful data.
+
+Test by retrieving objects from the database using their ids (see the course)
+
+Solve the following queries in JPQL. Display the results.
+
+
+1) Given employee email → return full employee details (including department, salary, hire date, score).
+2) Given team name → list all team members.
+3) Given team name → return the team lead.
+4) Given project name → return the assigned team and project status.
+5) Given employee name → list all teams the employee belongs to.
+6) Given salary threshold → list all teams that have at least one employee earning above that amount.
+
 ## Install Docker Desktop
 
 ### Windows
