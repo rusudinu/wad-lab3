@@ -21,6 +21,7 @@ Solve the following queries in JPQL. Display the results.
 5) Given employee name → list all teams the employee belongs to.
 6) Given salary threshold → list all teams that have at least one employee earning above that amount.
 
+# Helper tutorial
 ## Install Docker Desktop
 
 ### Windows
