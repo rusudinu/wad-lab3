@@ -14,7 +14,7 @@ public class DemoNoteService {
 	}
 
 	public DemoNote create(String title, String body) {
-		return repository.save(new DemoNote(title, body));
+		return repository.save(DemoNote.builder().title(title).body(body).build());
 	}
 
 	public List<DemoNote> findAll() {

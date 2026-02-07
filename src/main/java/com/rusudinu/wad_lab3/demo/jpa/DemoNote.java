@@ -6,9 +6,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "demo_notes")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class DemoNote {
 
 	@Id
@@ -19,24 +27,4 @@ public class DemoNote {
 
 	@Column(length = 2000)
 	private String body;
-
-	protected DemoNote() {
-	}
-
-	public DemoNote(String title, String body) {
-		this.title = title;
-		this.body = body;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public String getBody() {
-		return body;
-	}
 }
